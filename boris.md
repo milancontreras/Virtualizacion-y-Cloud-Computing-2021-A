@@ -1,6 +1,7 @@
-## 1. Create an Amazon S3 bucket to use for uploading videos to be converted
+## 1.Creación de la instancia EC2
 
-Use the console or AWS CLI to create an Amazon S3 bucket. Keep in mind that your bucket's name must be globally unique across all regions and customers. We recommend using a name like `vod-watchfolder-firstname-lastname`. If you get an error that your bucket name already exists, try adding additional numbers or characters until you find an unused name.
+La instancia EC2 serviara para  poder implementar nuestro servidor, ella pondremos nuestra página web que estara sobre el
+cms wordpress. Sin emabargo para ello neceistamos configurar ciertos servicios primeros como lo es  WAF (firewall), los grupos de seguridad y el par de clases para poder conectarnos a nuestra instancia.
 
 1. In the AWS Management Console choose **Services** then select **S3** under Storage.
 
