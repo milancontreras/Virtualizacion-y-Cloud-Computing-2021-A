@@ -1,8 +1,23 @@
-# Tutorial: Automatically trigger MediaConvert jobs on S3 objects and get notifications when the jobs finish
+# Tutorial: Proyecto PArte Milan Contreras
 
-A watchfolder is a common method for automating video ingest and delivery workflows.  Users with video ready for delivery upload their files to a known storage location.  The upload automatically triggers an ingest workflow that converts the video to formats suitable for delivery and stores them in the cloud for on-demand viewing.   The Serverless Video Conversion Watchfolder Workflow solves this problem by using [Amazon S3](https://aws.amazon.com/s3), [AWS Lambda](https://aws.amazon.com/lambda/), [AWS MediaConvert](https://aws.amazon.com/mediaconvert/), [Amazon CloudWatch Events](https://aws.amazon.com/cloudwatch) and [Amazon Simple Notification Service](https://aws.amazon.com/sns).
+## 1. Crear un Amzaron S3 Bucket para almacenar los videos a ser convertidos
+1. En la Consola de administración de AWS seleccionamos **Servicios** y luego seleccionamos **S3** ubicado en Almacenamiento.
+2. Escogemos **Crear Bucket**.
+3. Proporcionamos un nombre único a nivel mundial para el bucket. Por ejemplo `vod-fuente-proyecto`.
+4. Seleccionamos la región preferida.
+5. Escogemos **Crear Bucket**.
+6. Una vez creado el S3 bucket obtendremos el siguiente resultado.
 
-The workflow will create the following outputs for each video uploaded to the WatchFolder S3 bucket /inputs folder:
-- An Apple HLS adaptive bitrate stream for playout on multiple sized devices and varying bandwiths.
-- An MP4 stream
-- Thumbnail images collected at intervals
+    ![Create source bucket screenshot](../proyectos/imagenes/s3-crear-fuente.png)
+    *image_caption*
+
+<p align = "center">
+<img src = "../imagenes/s3-crear-fuente.png">
+</p>
+<p align = "center">
+Fig.1 - S3 vod-fuente-proyecto creado
+</p>
+
+| ![space-1.jpg](../imagenes/s3-crear-fuente.png) |
+|:--:|
+| <b>Image Credits - Fig.2 - 4K Mountains Wallpaper</b>|
